@@ -1,0 +1,114 @@
+<div class="vehicle-form-container">
+  <header class="form-header">
+    <!-- Title will be dynamic: "Add New Vehicle" or "Edit Vehicle [Vehicle Name]" -->
+    <h1 class="form-header__title" id="vehicle-form-title">Add New Vehicle</h1>
+  </header>
+
+  <form class="vehicle-form">
+    <div class="form-section">
+      <h2 class="form-section__title">Basic Information</h2>
+      <div class="form-grid">
+        <div class="form-group form-group--half">
+          <label for="vehicle-brand" class="form-group__label">Brand <span class="required-field">*</span></label>
+          <input type="text" id="vehicle-brand" class="form-group__input" placeholder="E.g., Fiat, BMW" required>
+        </div>
+        <div class="form-group form-group--half">
+          <label for="vehicle-model" class="form-group__label">Model <span class="required-field">*</span></label>
+          <input type="text" id="vehicle-model" class="form-group__input" placeholder="E.g., Panda, Series 3" required>
+        </div>
+        <div class="form-group form-group--quarter">
+          <label for="vehicle-year" class="form-group__label">Year <span class="required-field">*</span></label>
+          <input type="number" id="vehicle-year" class="form-group__input" placeholder="E.g., 2023" required>
+        </div>
+        <div class="form-group form-group--quarter">
+          <label for="vehicle-license-plate" class="form-group__label">License Plate <span class="required-field">*</span></label>
+          <input type="text" id="vehicle-license-plate" class="form-group__input" placeholder="E.g., AB123CD" required>
+        </div>
+        <div class="form-group form-group--half">
+          <label for="vehicle-vin" class="form-group__label">VIN (Vehicle Identification Number) <span class="required-field">*</span></label>
+          <input type="text" id="vehicle-vin" class="form-group__input" placeholder="17-character VIN" required>
+        </div>
+        <div class="form-group form-group--half">
+          <label for="vehicle-color" class="form-group__label">Color</label>
+          <input type="text" id="vehicle-color" class="form-group__input" placeholder="E.g., Red, Black">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2 class="form-section__title">Technical Details</h2>
+      <div class="form-grid">
+        <div class="form-group form-group--third">
+          <label for="vehicle-engine-type" class="form-group__label">Engine Type</label>
+          <input type="text" id="vehicle-engine-type" class="form-group__input" placeholder="E.g., 1.2L Petrol, Electric">
+        </div>
+        <div class="form-group form-group--third">
+          <label for="vehicle-transmission" class="form-group__label">Transmission <span class="required-field">*</span></label>
+          <select id="vehicle-transmission" class="form-group__select" required>
+            <option value="">Select Transmission</option>
+            <option value="manual">Manual</option>
+            <option value="automatic">Automatic</option>
+          </select>
+        </div>
+        <div class="form-group form-group--third">
+          <label for="vehicle-fuel-type" class="form-group__label">Fuel Type <span class="required-field">*</span></label>
+          <select id="vehicle-fuel-type" class="form-group__select" required>
+            <option value="">Select Fuel Type</option>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="electric">Electric</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="lpg">LPG</option>
+            <option value="cng">CNG</option>
+          </select>
+        </div>
+        <div class="form-group form-group--third">
+          <label for="vehicle-mileage" class="form-group__label">Mileage (km) <span class="required-field">*</span></label>
+          <input type="number" id="vehicle-mileage" class="form-group__input" placeholder="E.g., 25000" required min="0">
+        </div>
+        <div class="form-group form-group--third">
+          <label for="vehicle-price-per-day" class="form-group__label">Price per Day (&euro;) <span class="required-field">*</span></label>
+          <input type="number" id="vehicle-price-per-day" class="form-group__input" placeholder="E.g., 75" required min="0" step="0.01">
+        </div>
+        <div class="form-group form-group--third">
+          <label for="vehicle-status" class="form-group__label">Status <span class="required-field">*</span></label>
+          <select id="vehicle-status" class="form-group__select" required>
+            <option value="available">Available</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="booked">Booked (Read-only)</option> <!-- May be auto-set -->
+            <option value="unavailable">Unavailable</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2 class="form-section__title">Features</h2>
+      <div class="form-group">
+        <label for="vehicle-features" class="form-group__label">Describe key features (one per line)</label>
+        <textarea id="vehicle-features" class="form-group__textarea" rows="4" placeholder="E.g., GPS Navigation&#10;Sunroof&#10;Bluetooth Connectivity"></textarea>
+        <!-- Or use checkboxes for predefined features -->
+        <!-- <div class="checkbox-group">
+          <label><input type="checkbox" name="features" value="gps"> GPS</label>
+          <label><input type="checkbox" name="features" value="sunroof"> Sunroof</label>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2 class="form-section__title">Images</h2>
+      <div class="form-group">
+        <label for="vehicle-image-upload" class="form-group__label">Upload Vehicle Images</label>
+        <input type="file" id="vehicle-image-upload" class="form-group__input-file" multiple accept="image/*">
+        <div class="image-preview-placeholder">
+          <p>Image previews will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="button button--secondary">Cancel</button>
+      <button type="submit" class="button button--primary">Save Vehicle</button>
+    </div>
+  </form>
+</div>

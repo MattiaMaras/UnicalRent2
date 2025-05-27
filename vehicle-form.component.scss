@@ -1,0 +1,148 @@
+// Assuming general .button styles are available globally or inherited.
+
+.vehicle-form-container {
+  background-color: #fff;
+  padding: 20px 30px; // More horizontal padding
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.form-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+
+  &__title {
+    font-size: 1.7em; // Slightly smaller than page titles
+    color: #343a40;
+    margin: 0;
+  }
+}
+
+.vehicle-form {
+  // Main form styling
+}
+
+.form-section {
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: 1.2em;
+    color: #007bff; // Primary color for section titles
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); // 12-column grid system
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px; // Default margin for groups not in a grid
+
+  // Grid column spans - adjust as needed
+  &--half { grid-column: span 6; }
+  &--third { grid-column: span 4; }
+  &--quarter { grid-column: span 3; }
+  &--full { grid-column: span 12; } // If a field needs full width within a grid
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; // Bolder labels
+    color: #495057;
+    font-size: 0.9em;
+
+    .required-field {
+      color: #dc3545; // Red asterisk for required fields
+      margin-left: 2px;
+    }
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  &__input-file {
+    // Basic styling for file input, can be enhanced with JS
+    border: 1px solid #ced4da;
+    padding: 8px;
+    border-radius: 4px;
+    display: block; // Take full width
+  }
+}
+
+.image-preview-placeholder {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px dashed #ced4da;
+  border-radius: 4px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.checkbox-group { // If using checkboxes for features
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+
+  .button {
+    min-width: 120px; // Give buttons a decent minimum width
+  }
+}
+
+// Responsive adjustments for form grid
+@media (max-width: 768px) {
+  .form-group--half,
+  .form-group--third,
+  .form-group--quarter {
+    grid-column: span 12; // Stack all grid items on smaller screens
+  }
+}

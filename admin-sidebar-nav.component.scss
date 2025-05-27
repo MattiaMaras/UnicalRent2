@@ -1,0 +1,106 @@
+.admin-sidebar-nav {
+  color: #ecf0f1; // Light text for dark background
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid #4a6278; // Separator line
+    margin-bottom: 15px;
+
+    .profile__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #007bff; // Example avatar color
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 1.2em;
+    }
+
+    .profile__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile__name {
+      font-weight: bold;
+      font-size: 1em;
+      color: #fff;
+    }
+
+    .profile__role {
+      font-size: 0.8em;
+      color: #bdc3c7; // Lighter color for role
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 5px; // Reduced margin for a denser look
+
+    &--separator {
+      height: 1px;
+      background-color: #4a6278;
+      margin: 15px 0;
+    }
+  }
+
+  &__link {
+    display: flex; // Use flex for icon and text alignment
+    align-items: center;
+    padding: 12px 20px; // Consistent padding
+    text-decoration: none;
+    color: #bdc3c7; // Default link color
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-size: 0.95em;
+
+    // .icon {
+    //   margin-right: 12px;
+    //   font-size: 1.2em; // Adjust icon size
+    //   width: 20px; // Ensure icons align well
+    //   text-align: center;
+    // }
+
+    span {
+      flex-grow: 1; // Text takes available space
+    }
+
+    &:hover {
+      background-color: #4a6278; // Hover background
+      color: #ffffff; // Brighter text on hover
+    }
+
+    &--active {
+      background-color: #007bff; // Active link background (e.g., primary color)
+      color: white;
+      font-weight: bold;
+
+      // .icon { // Active icon color
+      //   color: white;
+      // }
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    &--logout {
+      // color: #e74c3c; // A reddish color for logout
+      &:hover {
+        background-color: #c0392b; // Darker red background on hover
+        color: #ffffff;
+      }
+    }
+  }
+}

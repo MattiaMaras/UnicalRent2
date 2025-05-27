@@ -1,0 +1,260 @@
+// General styles for buttons if not globally available
+.button {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &--primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    &:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  }
+
+  &--secondary {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+    &:hover {
+      background-color: #545b62;
+      border-color: #545b62;
+    }
+    &:disabled {
+      background-color: #adb5bd;
+      color: #6c757d;
+      cursor: not-allowed;
+      border-color: #adb5bd;
+    }
+  }
+
+  &--success {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+    &:hover {
+      background-color: #1e7e34;
+      border-color: #1e7e34;
+    }
+  }
+}
+
+.booking-process {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden; // Ensures child elements like progress bar fit nicely
+
+  &__header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  &__title {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+
+    .current-step, .total-steps {
+      font-weight: bold;
+    }
+    .step-name {
+      font-weight: normal;
+      color: #555;
+      font-size: 0.9em;
+    }
+  }
+
+  &__progress-bar {
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .progress-bar__indicator {
+      height: 100%;
+      background-color: #007bff;
+      border-radius: 5px;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+  &__content-area {
+    padding: 25px;
+  }
+
+  &__footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.booking-step {
+  // display: none; // Controlled by JS or Angular directives
+  // &.active-step {
+  //   display: block;
+  // }
+
+  &__title {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+  }
+}
+
+// Basic form styling for elements within steps
+.booking-form {
+  .form-group {
+    margin-bottom: 20px;
+
+    &__label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #495057;
+    }
+
+    &__input,
+    &__textarea,
+    &__select { // If select elements are used
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+
+      &:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+      }
+    }
+
+    &__textarea {
+      resize: vertical; // Allow vertical resize, disable horizontal
+    }
+
+    &--checkbox {
+      display: flex;
+      align-items: center;
+      .form-group__checkbox-input {
+        width: auto; // Override full width for checkbox
+        margin-right: 10px;
+      }
+      .form-group__checkbox-label {
+        margin-bottom: 0; // Align with checkbox
+        font-weight: normal;
+        a {
+          color: #007bff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Placeholder styling for vehicle selection
+.vehicle-selection-placeholder {
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.selected-vehicle-info {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f0f8ff; // Light blue background
+  border: 1px solid #cce5ff; // Light blue border
+  border-radius: 4px;
+
+  &__title {
+    font-size: 1.1em;
+    color: #004085; // Darker blue for title
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  &__details {
+    font-size: 1em;
+    color: #004085;
+    margin: 0;
+  }
+}
+
+
+// Summary step styling
+.summary-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ced4da;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: 1.2em;
+    color: #495057;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+  }
+}
+
+.summary-total-cost__amount {
+  font-size: 1.5em !important; // Make total cost stand out
+  font-weight: bold;
+  color: #28a745 !important; // Green color for total cost
+}
+
+// Utility to hide steps (can be toggled by JS)
+// .hidden-step {
+//   display: none !important;
+// }
+#step-date-time.active-step,
+#step-vehicle-selection.active-step,
+#step-motivation.active-step,
+#step-summary.active-step {
+  // This is just to ensure .active-step would work if applied;
+  // actual toggling is via `style="display: none;"` in HTML for now.
+  // In a real app, Angular's *ngIf or [hidden] would manage this.
+}
+
+#step-vehicle-selection,
+#step-motivation,
+#step-summary {
+  // Ensure non-active steps are hidden by default if not using JS to add .active-step
+  // and only relying on inline styles initially.
+  // This is redundant if inline styles are used, but good for clarity.
+}

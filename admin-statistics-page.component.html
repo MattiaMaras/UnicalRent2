@@ -1,0 +1,96 @@
+<div class="admin-statistics-page">
+  <header class="page-header">
+    <h1 class="page-header__title">Platform Statistics & Reports</h1>
+    <!-- Optional: Date range picker or global report generation button -->
+    <!-- <button class="button button--outline-secondary">Generate Full Report</button> -->
+  </header>
+
+  <div class="page-content">
+    <section class="filters-section card">
+      <h2 class="filters-section__title">Filter Statistics</h2>
+      <form class="filters-form">
+        <div class="form-grid">
+          <div class="form-group form-group--third">
+            <label for="stats-date-start" class="form-group__label">Date From</label>
+            <input type="date" id="stats-date-start" class="form-group__input">
+          </div>
+          <div class="form-group form-group--third">
+            <label for="stats-date-end" class="form-group__label">Date To</label>
+            <input type="date" id="stats-date-end" class="form-group__input">
+          </div>
+          <div class="form-group form-group--third">
+            <label for="stats-vehicle-type" class="form-group__label">Vehicle Type (Optional)</label>
+            <select id="stats-vehicle-type" class="form-group__select">
+              <option value="">All Types</option>
+              <option value="car-compact">Car - Compact</option>
+              <option value="car-suv">Car - SUV</option>
+              <option value="van">Van</option>
+              <option value="scooter">Scooter</option>
+              <!-- Add more types as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="filters-form__actions">
+          <button type="reset" class="button button--outline-secondary">Clear Filters</button>
+          <button type="submit" class="button button--primary">Update Statistics</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="statistics-overview-section card">
+      <h2 class="statistics-overview-section__title">Key Metrics Overview</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3 class="metric-card__title">Total Bookings</h3>
+          <p class="metric-card__value" id="metric-total-bookings">1,234</p>
+          <span class="metric-card__change metric-card__change--positive">+5% vs last period</span>
+        </div>
+        <div class="metric-card">
+          <h3 class="metric-card__title">Total Revenue</h3>
+          <p class="metric-card__value" id="metric-total-revenue">&euro; 56,789</p>
+          <span class="metric-card__change metric-card__change--positive">+8% vs last period</span>
+        </div>
+        <div class="metric-card">
+          <h3 class="metric-card__title">Active Vehicles</h3>
+          <p class="metric-card__value" id="metric-active-vehicles">78</p>
+          <span class="metric-card__change">Currently Available</span>
+        </div>
+        <div class="metric-card">
+          <h3 class="metric-card__title">New Users</h3>
+          <p class="metric-card__value" id="metric-new-users">152</p>
+          <span class="metric-card__change metric-card__change--negative">-2% vs last period</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="charts-section">
+      <div class="chart-container card">
+        <h3 class="chart-container__title">Bookings Over Time</h3>
+        <div class="chart-placeholder" id="chart-bookings-over-time">
+          <p>Chart: Bookings trend (e.g., line chart)</p>
+        </div>
+      </div>
+
+      <div class="chart-container card">
+        <h3 class="chart-container__title">Most Popular Vehicles</h3>
+        <div class="chart-placeholder" id="chart-popular-vehicles">
+          <p>Chart: Top 5 vehicles by booking count (e.g., bar chart)</p>
+        </div>
+      </div>
+
+      <div class="chart-container card">
+        <h3 class="chart-container__title">Revenue by Vehicle Type</h3>
+        <div class="chart-placeholder" id="chart-revenue-by-type">
+          <p>Chart: Revenue distribution (e.g., pie chart)</p>
+        </div>
+      </div>
+
+      <div class="chart-container card">
+        <h3 class="chart-container__title">User Activity</h3>
+        <div class="chart-placeholder" id="chart-user-activity">
+          <p>Chart: Daily/Weekly active users (e.g., area chart)</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

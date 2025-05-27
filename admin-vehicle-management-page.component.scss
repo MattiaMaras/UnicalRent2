@@ -1,0 +1,172 @@
+// General styles for elements if not globally available or need overrides
+// (Assuming .button, .icon, .link, etc. might be globally styled)
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex; // For icon alignment
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &--primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    &:hover { background-color: #0056b3; border-color: #0056b3; }
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 0.875em;
+    font-weight: normal;
+  }
+
+  &--icon { // For buttons that are primarily icons, or have icons
+    // .icon { margin-right: 5px; }
+    // If it's just an icon, padding might be square:
+    // padding: 8px;
+    // .icon { margin-right: 0; }
+    span { margin-left: 5px; } // Space between icon and text if both present
+  }
+
+
+  &--outline-primary {
+    color: #007bff; border-color: #007bff; background-color: transparent;
+    &:hover { background-color: #007bff; color: white; }
+  }
+  &--outline-danger {
+    color: #dc3545; border-color: #dc3545; background-color: transparent;
+    &:hover { background-color: #dc3545; color: white; }
+  }
+  &--outline-secondary {
+    color: #6c757d; border-color: #6c757d; background-color: transparent;
+    &:hover { background-color: #6c757d; color: white; }
+  }
+}
+
+
+.admin-vehicle-management-page {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+
+  &__title {
+    font-size: 1.8em;
+    color: #343a40;
+    margin: 0;
+  }
+}
+
+.page-content {
+  // Container for table and other content
+}
+
+.table-container {
+  overflow-x: auto; // Responsive table
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+
+  &__head {
+    background-color: #f8f9fa;
+    th {
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600; // Slightly bolder for admin tables
+      color: #495057;
+      border-bottom: 2px solid #dee2e6;
+      white-space: nowrap;
+    }
+  }
+
+  &__body {
+    tr {
+      border-bottom: 1px solid #e9ecef;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background-color: #f1f3f5;
+      }
+    }
+
+    td {
+      padding: 10px 15px;
+      vertical-align: middle;
+      color: #495057;
+      white-space: nowrap; // Default for most cells, can be overridden
+    }
+  }
+}
+
+.vehicle-thumbnail {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.status-tag {
+  padding: 5px 10px;
+  border-radius: 15px; // Pill shape
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: capitalize;
+
+  &--available { background-color: #d4edda; color: #155724; } // Green
+  &--maintenance { background-color: #fff3cd; color: #856404; } // Yellow
+  &--booked { background-color: #f8d7da; color: #721c24; } // Red
+  // Add other statuses as needed
+}
+
+.actions-cell {
+  white-space: nowrap; // Ensure buttons stay on one line
+  .button {
+    margin-right: 6px;
+    &:last-child { margin-right: 0; }
+  }
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-top: 20px;
+  color: #6c757d;
+  p { margin: 0; }
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Responsive adjustments for the data-table (optional, if needed beyond overflow-x)
+@media (max-width: 992px) { // Example breakpoint
+  .data-table {
+    // Add specific responsive styles if simple overflow is not enough
+    // For example, hiding less critical columns or changing layout.
+    // For now, relying on overflow-x and nowrap for simplicity.
+  }
+}

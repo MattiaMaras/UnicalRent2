@@ -1,0 +1,64 @@
+<form class="vehicle-filter">
+  <div class="vehicle-filter__grid">
+    <div class="filter-group">
+      <label for="filter-brand" class="filter-group__label">Marca (Brand)</label>
+      <input type="text" id="filter-brand" class="filter-group__input" placeholder="E.g., Fiat, BMW">
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-model" class="filter-group__label">Modello (Model)</label>
+      <input type="text" id="filter-model" class="filter-group__input" placeholder="E.g., Panda, Series 3">
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-year" class="filter-group__label">Anno (Year)</label>
+      <input type="number" id="filter-year" class="filter-group__input" placeholder="E.g., 2020">
+    </div>
+
+    <div class="filter-group filter-group--price-range">
+      <label class="filter-group__label">Prezzo (Price Range)</label>
+      <div class="price-inputs">
+        <input type="number" id="filter-price-min" class="filter-group__input filter-group__input--half" placeholder="Min">
+        <span>-</span>
+        <input type="number" id="filter-price-max" class="filter-group__input filter-group__input--half" placeholder="Max">
+      </div>
+      <!-- Placeholder for a potential slider -->
+      <!-- <div class="price-slider-placeholder"></div> -->
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-mileage" class="filter-group__label">Chilometraggio (Mileage)</label>
+      <input type="number" id="filter-mileage" class="filter-group__input" placeholder="E.g., 50000">
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-fuel-type" class="filter-group__label">Tipo di carburante (Fuel Type)</label>
+      <select id="filter-fuel-type" class="filter-group__select">
+        <option value="">Any</option>
+        <option value="petrol">Petrol</option>
+        <option value="diesel">Diesel</option>
+        <option value="electric">Electric</option>
+        <option value="hybrid">Hybrid</option>
+        <option value="lpg">LPG</option>
+        <option value="cng">CNG</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-doors" class="filter-group__label">Numero di porte (Number of Doors)</label>
+      <input type="number" id="filter-doors" class="filter-group__input" min="2" max="7" placeholder="E.g., 3, 5">
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-color" class="filter-group__label">Colore (Color)</label>
+      <input type="text" id="filter-color" class="filter-group__input" placeholder="E.g., Red, Black">
+      <!-- Placeholder for color picker -->
+      <!-- <input type="color" id="filter-color-picker"> -->
+    </div>
+  </div>
+
+  <div class="vehicle-filter__actions">
+    <button type="reset" class="button button--secondary">Reset Filters</button>
+    <button type="submit" class="button button--primary">Search Vehicles</button>
+  </div>
+</form>

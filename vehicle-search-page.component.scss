@@ -1,0 +1,28 @@
+.vehicle-search-page {
+  &__title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  &__filters {
+    margin-bottom: 30px;
+    // app-vehicle-filter will have its own styles
+    // but you might add some wrapper styles here if needed
+  }
+
+  &__results {
+    // app-vehicle-display-area will have its own styles
+  }
+}
+
+// Placeholder for child components if needed for layout within vehicle-search-page
+app-vehicle-filter {
+  display: block; // Ensure it takes space
+}
+
+app-vehicle-display-area {
+  display: block; // Ensure it takes space
+}
