@@ -1,0 +1,49 @@
+.sidebar-nav {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &--separator {
+      height: 1px;
+      background-color: #ddd;
+      margin: 15px 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #e9ecef;
+      color: #007bff;
+    }
+
+    &--active {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #0056b3; // Darker on hover for active link
+      }
+    }
+
+    &--logout {
+      color: #d9534f; // A reddish color for logout
+      &:hover {
+        background-color: #f8d7da; // Light red background on hover
+        color: #721c24; // Darker red text on hover
+      }
+    }
+  }
+}

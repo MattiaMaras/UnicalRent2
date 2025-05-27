@@ -1,0 +1,150 @@
+// Assuming general .button, .card, .filters-form, .form-grid, .form-group styles
+// are available from other admin SCSS files or a global stylesheet.
+
+.admin-statistics-page {
+  // Overall page container
+}
+
+.page-header { // Shared style
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+
+  &__title {
+    font-size: 1.8em;
+    color: #343a40;
+    margin: 0;
+  }
+}
+
+.card { // Shared style
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.filters-section { // Shared with admin-bookings-view-page
+  &__title {
+    font-size: 1.3em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.filters-form { // Shared with admin-bookings-view-page
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+  }
+}
+
+.statistics-overview-section {
+  &__title {
+    font-size: 1.3em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); // Responsive grid for metric cards
+  gap: 20px;
+}
+
+.metric-card {
+  background-color: #f8f9fa; // Light background for individual cards
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  text-align: center;
+
+  &__title {
+    font-size: 1em;
+    color: #6c757d; // Muted color for title
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__value {
+    font-size: 2.2em;
+    color: #007bff; // Primary color for the value
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  &__change {
+    font-size: 0.85em;
+    color: #6c757d;
+
+    &--positive {
+      color: #28a745; // Green for positive change
+    }
+    &--negative {
+      color: #dc3545; // Red for negative change
+    }
+  }
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); // Grid for chart containers
+  gap: 25px;
+}
+
+.chart-container {
+  // .card styling is applied directly to .chart-container in the HTML
+  &__title {
+    font-size: 1.2em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.chart-placeholder {
+  min-height: 250px; // Ensure charts have some space
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef; // Placeholder background
+  border-radius: 4px;
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+  .charts-section {
+    grid-template-columns: 1fr; // Stack charts on smaller screens
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-form .form-group {
+    // grid-column: span 12; // Stack filter fields if using form-grid
+  }
+  .metric-card__value {
+    font-size: 1.8em;
+  }
+}

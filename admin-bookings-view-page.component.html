@@ -1,0 +1,123 @@
+<div class="admin-bookings-view-page">
+  <header class="page-header">
+    <h1 class="page-header__title">All Bookings</h1>
+    <!-- Optional: Export button or other global actions -->
+    <!-- <button class="button button--outline-secondary button--with-icon">
+      <i class="icon icon-download"></i>
+      <span>Export Data</span>
+    </button> -->
+  </header>
+
+  <div class="page-content">
+    <section class="filters-section card">
+      <h2 class="filters-section__title">Filter Bookings</h2>
+      <form class="filters-form">
+        <div class="form-grid">
+          <div class="form-group form-group--third">
+            <label for="filter-date-start" class="form-group__label">Date From</label>
+            <input type="date" id="filter-date-start" class="form-group__input">
+          </div>
+          <div class="form-group form-group--third">
+            <label for="filter-date-end" class="form-group__label">Date To</label>
+            <input type="date" id="filter-date-end" class="form-group__input">
+          </div>
+          <div class="form-group form-group--third">
+            <label for="filter-booking-status" class="form-group__label">Status</label>
+            <select id="filter-booking-status" class="form-group__select">
+              <option value="">All Statuses</option>
+              <option value="confirmed">Confirmed</option>
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+              <option value="active">Active (In Progress)</option>
+            </select>
+          </div>
+          <div class="form-group form-group--half">
+            <label for="filter-user-id" class="form-group__label">User ID or Name</label>
+            <input type="text" id="filter-user-id" class="form-group__input" placeholder="Enter User ID or Name">
+          </div>
+          <div class="form-group form-group--half">
+            <label for="filter-vehicle-id" class="form-group__label">Vehicle ID or License Plate</label>
+            <input type="text" id="filter-vehicle-id" class="form-group__input" placeholder="Enter Vehicle ID or Plate">
+          </div>
+        </div>
+        <div class="filters-form__actions">
+          <button type="reset" class="button button--outline-secondary">Reset Filters</button>
+          <button type="submit" class="button button--primary">Apply Filters</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="bookings-list-section card">
+      <h2 class="bookings-list-section__title">Booking Records</h2>
+      <div class="table-container" id="all-bookings-table-wrapper">
+        <table class="data-table">
+          <thead class="data-table__head">
+            <tr>
+              <th>Booking ID</th>
+              <th>User</th>
+              <th>Vehicle</th>
+              <th>Start Date & Time</th>
+              <th>End Date & Time</th>
+              <th>Status</th>
+              <th>Total Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody class="data-table__body">
+            <!-- Placeholder Row 1 -->
+            <tr>
+              <td data-label="Booking ID">BK1001</td>
+              <td data-label="User">John Doe (User #12)</td>
+              <td data-label="Vehicle">Fiat Panda (AB123CD)</td>
+              <td data-label="Start Date">2023-10-15 09:00</td>
+              <td data-label="End Date">2023-10-17 18:00</td>
+              <td data-label="Status"><span class="status-tag status-tag--confirmed">Confirmed</span></td>
+              <td data-label="Total Price">&euro; 150.00</td>
+              <td data-label="Actions" class="actions-cell">
+                <button class="button button--small button--icon button--outline-secondary" aria-label="View Booking Details"><span>View</span></button>
+              </td>
+            </tr>
+            <!-- Placeholder Row 2 -->
+            <tr>
+              <td data-label="Booking ID">BK1002</td>
+              <td data-label="User">Jane Smith (User #25)</td>
+              <td data-label="Vehicle">BMW Series 3 (XY789ZW)</td>
+              <td data-label="Start Date">2023-11-01 10:00</td>
+              <td data-label="End Date">2023-11-05 17:00</td>
+              <td data-label="Status"><span class="status-tag status-tag--pending">Pending</span></td>
+              <td data-label="Total Price">&euro; 450.00</td>
+              <td data-label="Actions" class="actions-cell">
+                <button class="button button--small button--icon button--outline-secondary" aria-label="View Booking Details"><span>View</span></button>
+                <!-- Could add 'Approve' / 'Reject' for pending status -->
+              </td>
+            </tr>
+            <!-- Placeholder Row 3 (Completed) -->
+            <tr>
+              <td data-label="Booking ID">BK1003</td>
+              <td data-label="User">Robert Brown (User #4)</td>
+              <td data-label="Vehicle">Audi A4 (EF456GH)</td>
+              <td data-label="Start Date">2023-09-20 14:00</td>
+              <td data-label="End Date">2023-09-22 17:00</td>
+              <td data-label="Status"><span class="status-tag status-tag--completed">Completed</span></td>
+              <td data-label="Total Price">&euro; 220.00</td>
+              <td data-label="Actions" class="actions-cell">
+                <button class="button button--small button--icon button--outline-secondary" aria-label="View Booking Details"><span>View</span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- No Bookings Message - Placeholder -->
+      <div class="no-data-message" id="no-bookings-info" style="display: none;">
+        <p>No bookings found matching the criteria.</p>
+      </div>
+      <!-- Pagination Placeholder -->
+      <div class="pagination-controls">
+        <button class="button button--outline-secondary" disabled>&laquo; Prev</button>
+        <span>Page 1 of X</span>
+        <button class="button button--outline-secondary">Next &raquo;</button>
+      </div>
+    </section>
+  </div>
+</div>

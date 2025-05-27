@@ -1,0 +1,90 @@
+<div class="booking-process">
+  <header class="booking-process__header">
+    <h1 class="booking-process__title">Step <span class="current-step">1</span> of <span class="total-steps">4</span>: <span class="step-name">Select Date & Time</span></h1>
+    <!-- Progress bar (optional visual element) -->
+    <div class="booking-process__progress-bar">
+      <div class="progress-bar__indicator" style="width: 25%;"></div> <!-- Example: Step 1 of 4 -->
+    </div>
+  </header>
+
+  <main class="booking-process__content-area">
+    <!-- Step 1: Date/Time Selection (Date/Orari) -->
+    <section id="step-date-time" class="booking-step active-step">
+      <h2 class="booking-step__title">Select Dates and Times</h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="start-date" class="form-group__label">Start Date</label>
+          <input type="date" id="start-date" class="form-group__input">
+        </div>
+        <div class="form-group">
+          <label for="start-time" class="form-group__label">Start Time</label>
+          <input type="time" id="start-time" class="form-group__input">
+        </div>
+        <div class="form-group">
+          <label for="end-date" class="form-group__label">End Date</label>
+          <input type="date" id="end-date" class="form-group__input">
+        </div>
+        <div class="form-group">
+          <label for="end-time" class="form-group__label">End Time</label>
+          <input type="time" id="end-time" class="form-group__input">
+        </div>
+      </form>
+    </section>
+
+    <!-- Step 2: Vehicle Selection (Selezione Veicolo) -->
+    <section id="step-vehicle-selection" class="booking-step" style="display: none;">
+      <h2 class="booking-step__title">Select Vehicle</h2>
+      <div class="vehicle-selection-placeholder">
+        <p>Placeholder for vehicle filtering and selection components.</p>
+        <!-- In a real app, this might include <app-vehicle-filter> and <app-vehicle-display-area> -->
+      </div>
+      <div class="selected-vehicle-info">
+        <h3 class="selected-vehicle-info__title">Selected Vehicle:</h3>
+        <p class="selected-vehicle-info__details">None</p>
+        <!-- Example: <p>Fiat Panda - €50/day</p> -->
+      </div>
+    </section>
+
+    <!-- Step 3: Motivation (Motivazione) -->
+    <section id="step-motivation" class="booking-step" style="display: none;">
+      <h2 class="booking-step__title">Reason for Booking</h2>
+      <form class="booking-form">
+        <div class="form-group">
+          <label for="booking-motivation" class="form-group__label">Motivation / Purpose</label>
+          <textarea id="booking-motivation" class="form-group__textarea" rows="5" placeholder="E.g., Business trip to Rome, Weekend getaway..."></textarea>
+        </div>
+        <div class="form-group form-group--checkbox">
+          <input type="checkbox" id="terms-agreement" class="form-group__checkbox-input">
+          <label for="terms-agreement" class="form-group__checkbox-label">I agree to the <a href="/terms-of-service" target="_blank">terms and conditions</a> of booking.</label>
+        </div>
+      </form>
+    </section>
+
+    <!-- Step 4: Summary/Confirmation (Riepilogo/Conferma) -->
+    <section id="step-summary" class="booking-step" style="display: none;">
+      <h2 class="booking-step__title">Booking Summary & Confirmation</h2>
+      <div class="summary-section">
+        <h3 class="summary-section__title">Date & Time</h3>
+        <p id="summary-datetime">Start: [Date Time] - End: [Date Time]</p>
+      </div>
+      <div class="summary-section">
+        <h3 class="summary-section__title">Selected Vehicle</h3>
+        <p id="summary-vehicle">Vehicle: [Brand Model] - Price: [Total Price]</p>
+      </div>
+      <div class="summary-section">
+        <h3 class="summary-section__title">Motivation</h3>
+        <p id="summary-motivation">[Motivation text]</p>
+      </div>
+      <div class="summary-section">
+        <h3 class="summary-section__title">Total Estimated Cost</h3>
+        <p id="summary-total-cost" class="summary-total-cost__amount">&euro; [XXX.XX]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="booking-process__footer">
+    <button id="button-back" class="button button--secondary" disabled>Back</button>
+    <button id="button-next" class="button button--primary">Next</button>
+    <button id="button-confirm" class="button button--success" style="display: none;">Confirm Booking</button>
+  </footer>
+</div>

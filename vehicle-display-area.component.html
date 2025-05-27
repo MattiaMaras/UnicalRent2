@@ -1,0 +1,46 @@
+<div class="vehicle-display-area">
+  <!-- This is a placeholder for where vehicle cards would be dynamically rendered. -->
+  <!-- In a real Angular app, you'd use *ngFor to loop through search results. -->
+
+  <div class="vehicle-display-area__controls">
+    <div class="sort-options">
+      <label for="sort-by">Sort by:</label>
+      <select id="sort-by" class="sort-options__select">
+        <option value="relevance">Relevance</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="year-desc">Year: Newest First</option>
+        <option value="mileage-asc">Mileage: Low to High</option>
+      </select>
+    </div>
+    <div class="view-options">
+      <!-- Placeholder for potential list/grid view toggle -->
+      <!-- <button class="button button--icon"><i class="icon-grid"></i></button> -->
+      <!-- <button class="button button--icon"><i class="icon-list"></i></button> -->
+    </div>
+  </div>
+
+  <div class="vehicle-display-area__grid">
+    <!-- Placeholder for individual vehicle cards -->
+    <app-vehicle-card class="vehicle-display-area__card-item"></app-vehicle-card>
+    <app-vehicle-card class="vehicle-display-area__card-item"></app-vehicle-card>
+    <app-vehicle-card class="vehicle-display-area__card-item"></app-vehicle-card>
+    <app-vehicle-card class="vehicle-display-area__card-item"></app-vehicle-card>
+    <!-- Add more placeholders if needed to visualize layout -->
+  </div>
+
+  <!-- Placeholder for "No results found" message -->
+  <!--
+  <div class="vehicle-display-area__no-results">
+    <img src="path/to/no-results-icon.svg" alt="No results" class="no-results__icon">
+    <p class="no-results__message">No vehicles found matching your criteria. Try adjusting your filters.</p>
+  </div>
+  -->
+
+  <!-- Placeholder for pagination controls -->
+  <div class="vehicle-display-area__pagination">
+    <button class="button button--secondary" disabled>&laquo; Previous</button>
+    <span>Page 1 of X</span>
+    <button class="button button--secondary">Next &raquo;</button>
+  </div>
+</div>

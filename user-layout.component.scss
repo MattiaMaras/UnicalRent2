@@ -1,0 +1,57 @@
+.user-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    // In a real app, app-navbar would have its own styles
+    p { // Placeholder style
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1; // Allows this area to take up available space
+  }
+
+  &__sidebar {
+    width: 250px; // Example width
+    background-color: #f4f4f4;
+    padding: 20px;
+    // app-sidebar-nav will have its own styles
+  }
+
+  &__content {
+    flex-grow: 1; // Main content takes remaining space
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  &__footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    // In a real app, app-footer would have its own styles
+    p { // Placeholder style
+      margin: 0;
+    }
+  }
+}
+
+// This is a placeholder for router-outlet.
+// In Angular, it doesn't render as a visible element itself
+// but is a marker for where routed components are inserted.
+router-outlet {
+  display: block; // Or as needed by the content
+}
+
+// Placeholder for app-sidebar-nav if needed for layout within user-layout
+app-sidebar-nav {
+  display: block; // Ensure it takes space
+}

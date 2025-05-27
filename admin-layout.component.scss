@@ -1,0 +1,66 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5; // A slightly different background for admin
+
+  &__header {
+    background-color: #2c3e50; // Darker header for admin
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100; // Keep header on top
+
+    // In a real app, app-admin-navbar would have its own styles
+    p { // Placeholder style
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1; // Allows this area to take up available space
+  }
+
+  &__sidebar {
+    width: 260px; // Slightly wider sidebar for admin
+    background-color: #34495e; // Dark sidebar
+    color: #ecf0f1; // Light text color for dark sidebar
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    // app-admin-sidebar-nav will have its own styles
+  }
+
+  &__content {
+    flex-grow: 1; // Main content takes remaining space
+    padding: 30px; // More padding for admin content area
+    background-color: #f0f2f5; // Consistent with the overall admin bg
+    overflow-y: auto; // Allow scrolling for content
+  }
+
+  &__footer {
+    background-color: #2c3e50;
+    color: #bdc3c7; // Lighter text for footer
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid #34495e;
+
+    // In a real app, app-admin-footer would have its own styles
+    p { // Placeholder style
+      margin: 0;
+    }
+  }
+}
+
+// This is a placeholder for router-outlet.
+router-outlet {
+  display: block;
+}
+
+// Placeholder for app-admin-sidebar-nav if needed for layout within admin-layout
+app-admin-sidebar-nav {
+  display: block; // Ensure it takes space
+}

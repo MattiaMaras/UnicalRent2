@@ -1,0 +1,129 @@
+// Assuming general .button, .data-table, .status-tag, .actions-cell, .no-data-message,
+// .form-grid, .form-group styles are available from other admin SCSS files or a global sheet.
+
+.admin-bookings-view-page {
+  // Overall page container, if specific styling is needed beyond admin-layout's content area
+}
+
+.page-header { // Shared style, ensure consistency or define locally if different
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+
+  &__title {
+    font-size: 1.8em;
+    color: #343a40;
+    margin: 0;
+  }
+}
+
+.card { // A common wrapper for sections like filters and table
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.filters-section {
+  &__title {
+    font-size: 1.3em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.filters-form {
+  // Uses .form-grid, .form-group from vehicle-form or global styles
+  .form-group {
+    margin-bottom: 0; // Remove bottom margin if gap in form-grid is sufficient
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px; // Space above action buttons
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+  }
+}
+
+.bookings-list-section {
+  &__title {
+    font-size: 1.3em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+// Styles for .data-table, .status-tag, .actions-cell, .no-data-message
+// are assumed to be similar to admin-vehicle-management-page.component.scss
+// If they differ significantly, define them here. For example:
+.data-table {
+  // Ensure it uses styles defined in admin-vehicle-management-page.scss or a global sheet
+  // If specific overrides are needed for this table:
+  td[data-label="User"], td[data-label="Vehicle"] {
+    font-size: 0.9em; // Slightly smaller for potentially long combined strings
+  }
+  td[data-label="Total Price"] {
+    font-weight: 500;
+  }
+}
+
+// Status tags might have more variations or specific colors for booking states
+.status-tag {
+  // ... (ensure all used status tags are defined, e.g., --active)
+  &--active { background-color: #cfe2ff; color: #084298; } // Example for 'Active'
+}
+
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #e9ecef;
+
+  span {
+    font-size: 0.9em;
+    color: #6c757d;
+  }
+  .button:disabled {
+    color: #6c757d;
+    background-color: transparent;
+    border-color: #ced4da;
+    cursor: not-allowed;
+  }
+}
+
+// Responsive adjustments for filters and table
+@media (max-width: 992px) { // For filter form adjustments
+  .filters-form .form-group--third,
+  .filters-form .form-group--half {
+    // Example: stack filter fields sooner than general form fields if needed
+    // grid-column: span 6; // Or span 12 if they need to be full width
+  }
+}
+
+@media (max-width: 768px) {
+  .filters-form .form-group {
+    // grid-column: span 12; // Stack all filter fields
+  }
+  .filters-form__actions {
+    flex-direction: column;
+    .button {
+      width: 100%;
+      margin-bottom: 10px;
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+  // Data table responsive styles (e.g., card view) would typically be handled by global .data-table SCSS
+  // or by specific responsive table solution.
+}

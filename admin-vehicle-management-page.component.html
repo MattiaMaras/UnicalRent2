@@ -1,0 +1,85 @@
+<div class="admin-vehicle-management-page">
+  <header class="page-header">
+    <h1 class="page-header__title">Vehicle Management</h1>
+    <button class="button button--primary button--with-icon">
+      <!-- <i class="icon icon-plus"></i> -->
+      <span>Add New Vehicle</span>
+    </button>
+  </header>
+
+  <div class="page-content">
+    <div class="table-container" id="vehicles-table-wrapper">
+      <table class="data-table">
+        <thead class="data-table__head">
+          <tr>
+            <th>Image</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>License Plate</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="data-table__body">
+          <!-- Placeholder Row 1 -->
+          <tr>
+            <td data-label="Image"><img src="https://via.placeholder.com/80x50.png?text=Vehicle" alt="Vehicle" class="vehicle-thumbnail"></td>
+            <td data-label="Brand">Fiat</td>
+            <td data-label="Model">Panda</td>
+            <td data-label="Year">2022</td>
+            <td data-label="License Plate">AB123CD</td>
+            <td data-label="Status"><span class="status-tag status-tag--available">Available</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--icon button--outline-primary" aria-label="Edit">
+                <!-- <i class="icon icon-edit"></i> -->
+                <span>Edit</span>
+              </button>
+              <button class="button button--small button--icon button--outline-danger" aria-label="Delete">
+                <!-- <i class="icon icon-trash"></i> -->
+                <span>Delete</span>
+              </button>
+              <button class="button button--small button--icon button--outline-secondary" aria-label="View Details">
+                <!-- <i class="icon icon-eye"></i> -->
+                <span>View</span>
+              </button>
+            </td>
+          </tr>
+          <!-- Placeholder Row 2 -->
+          <tr>
+            <td data-label="Image"><img src="https://via.placeholder.com/80x50.png?text=Vehicle" alt="Vehicle" class="vehicle-thumbnail"></td>
+            <td data-label="Brand">BMW</td>
+            <td data-label="Model">Series 3</td>
+            <td data-label="Year">2023</td>
+            <td data-label="License Plate">XY789ZW</td>
+            <td data-label="Status"><span class="status-tag status-tag--maintenance">Maintenance</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--icon button--outline-primary" aria-label="Edit"><span>Edit</span></button>
+              <button class="button button--small button--icon button--outline-danger" aria-label="Delete"><span>Delete</span></button>
+              <button class="button button--small button--icon button--outline-secondary" aria-label="View Details"><span>View</span></button>
+            </td>
+          </tr>
+          <!-- Placeholder Row 3 -->
+          <tr>
+            <td data-label="Image"><img src="https://via.placeholder.com/80x50.png?text=Vehicle" alt="Vehicle" class="vehicle-thumbnail"></td>
+            <td data-label="Brand">Audi</td>
+            <td data-label="Model">A4</td>
+            <td data-label="Year">2021</td>
+            <td data-label="License Plate">EF456GH</td>
+            <td data-label="Status"><span class="status-tag status-tag--booked">Booked</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--icon button--outline-primary" aria-label="Edit"><span>Edit</span></button>
+              <button class="button button--small button--icon button--outline-danger" aria-label="Delete"><span>Delete</span></button>
+              <button class="button button--small button--icon button--outline-secondary" aria-label="View Details"><span>View</span></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- No Vehicles Message - Placeholder -->
+    <div class="no-data-message" id="no-vehicles-info" style="display: none;">
+      <p>No vehicles found. <a href="#" class="link">Add a new vehicle</a> to get started.</p>
+    </div>
+  </div>
+</div>

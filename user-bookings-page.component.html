@@ -1,0 +1,72 @@
+<div class="user-bookings-page">
+  <h1 class="user-bookings-page__title">My Bookings</h1>
+
+  <div class="user-bookings-page__content">
+    <!-- Bookings Table - Shown if there are bookings -->
+    <div class="bookings-table-container" id="bookings-table-wrapper">
+      <table class="bookings-table">
+        <thead class="bookings-table__head">
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Vehicle</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="bookings-table__body">
+          <!-- Placeholder Row 1 -->
+          <tr>
+            <td data-label="Start Date">2023-10-15 <br class="mobile-break">09:00</td>
+            <td data-label="End Date">2023-10-17 <br class="mobile-break">18:00</td>
+            <td data-label="Vehicle">Fiat Panda (2022)</td>
+            <td data-label="Status"><span class="status-badge status-badge--confirmed">Confirmed</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--outline-secondary">View</button>
+              <button class="button button--small button--outline-danger">Cancel</button>
+            </td>
+          </tr>
+          <!-- Placeholder Row 2 -->
+          <tr>
+            <td data-label="Start Date">2023-11-01 <br class="mobile-break">10:00</td>
+            <td data-label="End Date">2023-11-05 <br class="mobile-break">17:00</td>
+            <td data-label="Vehicle">BMW Series 3 (2023)</td>
+            <td data-label="Status"><span class="status-badge status-badge--pending">Pending</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--outline-secondary">View</button>
+              <button class="button button--small button--outline-danger">Cancel</button>
+            </td>
+          </tr>
+          <!-- Placeholder Row 3 -->
+          <tr>
+            <td data-label="Start Date">2023-09-20 <br class="mobile-break">14:00</td>
+            <td data-label="End Date">2023-09-20 <br class="mobile-break">17:00</td>
+            <td data-label="Vehicle">Audi A4 (2021)</td>
+            <td data-label="Status"><span class="status-badge status-badge--completed">Completed</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--outline-secondary">View</button>
+              <!-- No cancel button for completed bookings typically -->
+            </td>
+          </tr>
+           <!-- Placeholder Row 4 (Cancelled) -->
+          <tr>
+            <td data-label="Start Date">2023-08-10 <br class="mobile-break">11:00</td>
+            <td data-label="End Date">2023-08-12 <br class="mobile-break">12:00</td>
+            <td data-label="Vehicle">Volkswagen Golf (2020)</td>
+            <td data-label="Status"><span class="status-badge status-badge--cancelled">Cancelled</span></td>
+            <td data-label="Actions" class="actions-cell">
+              <button class="button button--small button--outline-secondary">View</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- No Bookings Message - Shown if there are no bookings -->
+    <div class="no-bookings-message" id="no-bookings-info" style="display: none;">
+      <img src="placeholder-no-bookings-icon.svg" alt="No bookings" class="no-bookings-message__icon">
+      <p class="no-bookings-message__text">You have no bookings yet.</p>
+      <a href="/user/search-vehicles" class="button button--primary">Make a Booking</a>
+    </div>
+  </div>
+</div>
