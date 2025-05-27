@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>DriveU</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="flex h-full min-h-[700px] flex-col justify-between bg-slate-50 p-4">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-[#0d141c] text-base font-medium leading-normal">Pannello di amministrazione</h1>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 px-3 py-2 rounded-full bg-[#e7edf4]">
+                    <div class="text-[#0d141c]" data-icon="Car" data-size="24px" data-weight="fill">
+                      <!-- icona -->
+                    </div>
+                    <p class="text-[#0d141c] text-sm font-medium leading-normal">Gestione veicoli</p>
+                  </div>
+                  <div class="flex items-center gap-3 px-3 py-2">
+                    <div class="text-[#0d141c]" data-icon="Calendar" data-size="24px" data-weight="regular">
+                      <!-- icona -->
+                    </div>
+                    <p class="text-[#0d141c] text-sm font-medium leading-normal">Panoramica prenotazioni</p>
+                  </div>
+                  <div class="flex items-center gap-3 px-3 py-2">
+                    <div class="text-[#0d141c]" data-icon="ChartLine" data-size="24px" data-weight="regular">
+                      <!-- icona -->
+                    </div>
+                    <p class="text-[#0d141c] text-sm font-medium leading-normal">Statistiche</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight min-w-72">Gestione veicoli</p>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#cedbe8] bg-slate-50">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-slate-50">
+                      <th class="px-4 py-3 text-left text-[#0d141c] w-14 text-sm font-medium leading-normal">Veicolo</th>
+                      <th class="px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Tipo</th>
+                      <th class="px-4 py-3 text-left text-[#0d141c] w-[400px] text-sm font-medium leading-normal">Disponibilità</th>
+                      <th class="px-4 py-3 text-left text-[#0d141c] w-60 text-sm font-medium leading-normal">Stato</th>
+                      <th class="px-4 py-3 text-left text-[#49719c] w-60 text-sm font-medium leading-normal">Azioni</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#cedbe8]">
+                      <td class="h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSAzbRqlBsOOM9hK5S6OZKYpmV9fwQH2RnZYOa85wD3Qnc0h1xAOkf73Uv5NQHUThFbRnOd4pvkmKecd8xJaiKBUU_lXTll307EACWAtU392udAyRIP_az3lnpzo7Hvwv85cqsxOblreU66QcHegTMRHJnLdobanFKxSwo1HZkKB2sRIm1QAEBeOCjwKIOTmedIXecr1o-9la63RM-Knmld5sFAvLt_dBUpd3EmwJM2zOVawZOGuLP7BQtwfr8nx8LxQdGGBcNMUU");'></div>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">SUV</td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">Disponibile</td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button class="flex w-full items-center justify-center rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal">
+                          <span class="truncate">Attivo</span>
+                        </button>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">Modifica</td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedbe8]">
+                      <td class="h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFHSXdDluhDzUuPbkgca-jWxNcSezCbIb_ofYLDFXz5wsheKy5QC_QaryV_ZyKdbqZlZ9wETDJoZ5HFSc5fL_QktsTKW6SO8S-VWBgjjuQBT3_vf87KF0lqPwyz30ENac_YoxFgjqSE7jwcsXrz2lzqQeEWMhRQ9IyvQm0DSxugR6pkYo45Xsypt6O-FNrMUjD5N6lQar9ilJHlVNR7_ctl5RkLUkcH0zgmdtc8JDC4M995gLMNptD5PYioKZLIzUPYg3TDfltJJ4");'></div>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">Berlina</td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">Non disponibile</td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button class="flex w-full items-center justify-center rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal">
+                          <span class="truncate">Inattivo</span>
+                        </button>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">Modifica</td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedbe8]">
+                      <td class="h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-m-tpo0IhgoS7uVbRU3hASs0O7PUaN-2ezHxKm2mYApK4q1TXPp0G2nU_4hnaXboZhv_pxc2E0it3QOb5nidlPtiDaI_53HMl6mzxa9BqbfQG7HsJVBLsE3m3qSnRo4mNPtgDQZvm8ZSMumKgFxx8fOXKQtsNySSLADE2thNe9J1_1XuuXfgZLKfisBItpa5Fsw7nz8jKGyPL_0sQY24rTZIWgYIoytdilq-ZrF1BmIZjwSW2XbY_lg-SOeWMAQH3L3O0anqk2K8");'></div>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">Camion</td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">Disponibile</td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button class="flex w-full items-center justify-center rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal">
+                          <span class="truncate">Attivo</span>
+                        </button>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">Modifica</td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedbe8]">
+                      <td class="h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAa5XLVaSs5KMFpihWK-ZQ3fdrXh5yTmOd4M5-mFiZ2V13FBR8hQU4_51H0L6N2zsXtwzjMIJ_xRM98Q_XPJFCuBqr1m5rjS_x3opyNVFAdv8lk07kgpckQSlqzTwQD-kUPVWp80a1GRt-qXDpWB798y1tIPCWHr4NRJibZ8bjEcq6DB2cswdWZNzDgB3ZY40EyY4TXkYoB0jTpmUraKskSvBjqSGnuPJbBEDkTdQ5uIboj3GpVHxHY3pJdI_r8IMvghCAoNTNzF14");'></div>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">Furgone</td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">Disponibile</td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button class="flex w-full items-center justify-center rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal">
+                          <span class="truncate">Attivo</span>
+                        </button>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">Modifica</td>
+                    </tr>
+                    <tr class="border-t border-t-[#cedbe8]">
+                      <td class="h-[72px] px-4 py-2 w-14 text-sm font-normal leading-normal">
+                        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt9GkTTqzKAFhDRoe_VPfbufChhZwOp-JIfRRtN5kXgYC3m6EwcCkZsoIesl6sTFAp6vX9kU2tYltOAxvorcYKB8Apd-WiNIKDIXF1Gn_txSVZO99kyC6F7yb6HiZatN8XZpLmyuas9iOPOH5wHJQ1VMz-LnQPZPx5LtV3aDig_c5rCBucqpjnX7doagkrsWkLhdXSZLy0CoiN7jMgN57Oeta3nieZNLrr2dvgCgums9Qy0ZAwLRbV8Cp_jxtoPId_4X0aP9-0gKs");'></div>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#0d141c] text-sm font-normal leading-normal">Compatto</td>
+                      <td class="h-[72px] px-4 py-2 w-[400px] text-[#49719c] text-sm font-normal leading-normal">Non disponibile</td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
+                        <button class="flex w-full items-center justify-center rounded-full h-8 px-4 bg-[#e7edf4] text-[#0d141c] text-sm font-medium leading-normal">
+                          <span class="truncate">Inattivo</span>
+                        </button>
+                      </td>
+                      <td class="h-[72px] px-4 py-2 w-60 text-[#49719c] text-sm font-bold leading-normal tracking-[0.015em]">Modifica</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                @container(max-width:56px){.table-d87c8d56-8c58-4b1a-964f-e604635ef487-column-56{display: none;}}
+                @container(max-width:176px){.table-d87c8d56-8c58-4b1a-964f-e604635ef487-column-176{display: none;}}
+                @container(max-width:296px){.table-d87c8d56-8c58-4b1a-964f-e604635ef487-column-296{display: none;}}
+                @container(max-width:416px){.table-d87c8d56-8c58-4b1a-964f-e604635ef487-column-416{display: none;}}
+                @container(max-width:536px){.table-d87c8d56-8c58-4b1a-964f-e604635ef487-column-536{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
